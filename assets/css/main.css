@@ -2341,7 +2341,8 @@ footer {
     width: 100%;
     position: fixed;
     top: 80px;
-    bottom: 16px;
+    /*bottom: 16px;*/
+    bottom: 0;
     padding-left: 16px;
     padding-right: 16px
 }
