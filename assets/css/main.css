@@ -3385,6 +3385,7 @@ select {
     padding: .25rem;
     border: none;
     /*border-bottom: 2px solid red;*/
+    resize: none;
     outline: 0;
     box-shadow: none;
     border-radius: 0;
