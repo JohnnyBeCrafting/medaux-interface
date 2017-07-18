@@ -1,36 +1,53 @@
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
+.mdx-app-aside-nav,
+.mdx-chat-room-aside,
+.mdx-chat-room-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal
+}
+
+*,
+.pika-button,
+:after,
+:before,
+[type=checkbox],
+[type=radio],
 html {
-    font-family: sans-serif;
-    line-height: 1.15;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+    box-sizing: border-box
 }
 
 body {
-    margin: 0
+    margin: 0;
+    color: #303030
 }
 
 article,
 aside,
+details,
 figcaption,
 figure,
 footer,
 header,
 main,
+menu,
 nav,
 section {
     display: block
 }
 
-pre {
+code,
+kbd,
+pre,
+samp {
     font-family: monospace, monospace;
     font-size: 1em
 }
 
 a {
     background-color: transparent;
-    -webkit-text-decoration-skip: objects
+    -webkit-text-decoration-skip: objects;
+    text-decoration: none
 }
 
 a:active,
@@ -42,23 +59,6 @@ abbr[title] {
     border-bottom: none;
     text-decoration: underline;
     text-decoration: underline dotted
-}
-
-b,
-strong {
-    font-weight: inherit
-}
-
-b,
-strong {
-    font-weight: bolder
-}
-
-code,
-kbd,
-samp {
-    font-family: monospace, monospace;
-    font-size: 1em
 }
 
 dfn {
@@ -148,17 +148,15 @@ button::-moz-focus-inner {
 [type=reset]:-moz-focusring,
 [type=submit]:-moz-focusring,
 button:-moz-focusring {
-    outline: 1px dotted ButtonText
+    outline: ButtonText dotted 1px
 }
 
 textarea {
     overflow: auto
 }
 
-
 [type=checkbox],
 [type=radio] {
-    box-sizing: border-box;
     padding: 0
 }
 
@@ -182,18 +180,13 @@ textarea {
     font: inherit
 }
 
-details,
-menu {
-    display: block
-}
-
 [hidden] {
     display: none
 }
 
 @font-face {
     font-family: medaux-icofont;
-    src: url("data:application/x-font-ttf;charset=utf-8;base64,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") format("truetype");
+    src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format("truetype");
     font-weight: 400;
     font-style: normal
 }
@@ -981,24 +974,6 @@ menu {
     animation-name: bounceOutUp
 }
 
-*,
-:after,
-:before {
-    box-sizing: border-box
-}
-
-html {
-    box-sizing: border-box
-}
-
-body {
-    color: #303030
-}
-
-a {
-    text-decoration: none
-}
-
 a:link,
 a:visited {
     color: #00b4ec
@@ -1009,7 +984,7 @@ a:hover {
 }
 
 a:focus {
-    outline: 0 none!important
+    outline: 0!important
 }
 
 input {
@@ -1097,6 +1072,8 @@ select::-moz-focus-inner {
 }
 
 html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
     font-family: Roboto, sans-serif;
     font-size: 16px;
     line-height: 1.4
@@ -1171,17 +1148,21 @@ strong {
     font-weight: 700
 }
 
-.mdx-btn {
-    font-size: .875rem;
-    text-transform: uppercase;
-    letter-spacing: .03rem;
-    font-weight: 500;
+.mdx-btn,
+header nav:not(.mdx-app-nav) a {
     display: inline-block;
-    padding: 1px 1rem 0 1rem;
+    text-transform: uppercase;
+    font-size: .875rem;
+    font-weight: 500
+}
+
+.mdx-btn {
+    letter-spacing: .03rem;
+    padding: 1px 1rem 0;
     border-radius: 4px;
     height: 38px;
     line-height: 38px;
-    border: 0 none!important;
+    border: 0!important;
     outline: 0!important;
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24)
@@ -1198,7 +1179,7 @@ strong {
 
 .mdx-btn.b-primary:active,
 .mdx-btn.b-primary:focus {
-    border: 0 none!important;
+    border: 0!important;
     outline: 0!important;
     text-decoration: none;
     background-color: #0095c3!important
@@ -1208,19 +1189,17 @@ strong {
     background-color: #0095c3
 }
 
-.mdx-btn.b-primary.btn-disabled {
-    background-color: #ccc!important;
-    color: #eee!important;
-    box-shadow: none!important;
-    cursor: default
-}
-
+.mdx-btn.b-primary.btn-disabled,
 .mdx-btn.b-primary.btn-disabled:active,
 .mdx-btn.b-primary.btn-disabled:focus,
 .mdx-btn.b-primary.btn-disabled:hover {
     background-color: #ccc!important;
     color: #eee!important;
     box-shadow: none!important
+}
+
+.mdx-btn.b-primary.btn-disabled {
+    cursor: default
 }
 
 .mdx-btn.b-flat {
@@ -1281,17 +1260,6 @@ header nav:not(.mdx-app-nav) {
     transition: transform .3s, -webkit-transform .3s
 }
 
-@media screen and (min-width:640px) {
-    header nav:not(.mdx-app-nav) {
-        position: relative;
-        width: auto;
-        height: auto;
-        background-color: transparent;
-        top: auto;
-        right: auto
-    }
-}
-
 header nav:not(.mdx-app-nav) li,
 header nav:not(.mdx-app-nav) ul {
     padding: 0;
@@ -1300,11 +1268,19 @@ header nav:not(.mdx-app-nav) ul {
 }
 
 header nav:not(.mdx-app-nav) a {
-    display: inline-block;
-    text-transform: uppercase;
-    font-size: .875rem;
-    font-weight: 500;
     padding: 0 .75rem
+}
+
+.landing-questions-list li:before,
+.mdx-app-mobile-menu-switcher:before,
+.mobile-menu-switcher:before {
+    text-transform: none;
+    font-family: medaux-icofont!important;
+    speak: none;
+    font-style: normal;
+    font-variant: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
 }
 
 header nav:not(.mdx-app-nav) a.current {
@@ -1318,6 +1294,12 @@ header nav:not(.mdx-app-nav) a.current:hover {
 
 @media screen and (min-width:640px) {
     header nav:not(.mdx-app-nav) {
+        position: relative;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        top: auto;
+        right: auto;
         margin-left: auto
     }
     header nav:not(.mdx-app-nav) ul {
@@ -1329,9 +1311,6 @@ header nav:not(.mdx-app-nav) a.current:hover {
     header nav:not(.mdx-app-nav) a {
         line-height: 65px
     }
-}
-
-@media screen and (min-width:640px) {
     .main-header-container {
         display: -webkit-box;
         display: -webkit-flex;
@@ -1431,15 +1410,8 @@ header nav:not(.mdx-app-nav) a.current:hover {
 
 .mdx-app-mobile-menu-switcher:before,
 .mobile-menu-switcher:before {
-    font-family: medaux-icofont!important;
-    speak: none;
-    font-style: normal;
     font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
     line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     content: "\e90b";
     position: relative;
     font-size: 2rem
@@ -1479,7 +1451,7 @@ header nav:not(.mdx-app-nav) a.current:hover {
 
 @media screen and (min-width:880px) {
     .hero-content-container {
-        background: #ecf6fb url(../img/doctors-2.svg) center bottom no-repeat;
+        background: url(../img/doctors-2.svg) center bottom no-repeat #ecf6fb;
         background-size: contain
     }
 }
@@ -1500,17 +1472,10 @@ header nav:not(.mdx-app-nav) a.current:hover {
 .hero-cta-card {
     background-color: #fff;
     margin: 0 auto;
-    padding: 1.5rem 1rem .75rem 1rem;
+    padding: 1.5rem 1rem .75rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, .15), 0 3px 6px rgba(0, 0, 0, .22);
     text-align: center;
     border-radius: 4px
-}
-
-@media screen and (min-width:768px) {
-    .hero-cta-card {
-        max-width: 640px;
-        padding: 1.5rem 1.5rem .75rem 1.5rem
-    }
 }
 
 .start-chat-form-holder {
@@ -1522,6 +1487,10 @@ header nav:not(.mdx-app-nav) a.current:hover {
 }
 
 @media screen and (min-width:768px) {
+    .hero-cta-card {
+        max-width: 640px;
+        padding: 1.5rem 1.5rem .75rem
+    }
     .start-chat-form-holder .icon-chat-lined {
         display: block;
         position: absolute;
@@ -1535,7 +1504,7 @@ header nav:not(.mdx-app-nav) a.current:hover {
 .hero-cta-copy-heading {
     font-size: .875rem;
     line-height: 1.4;
-    margin: 1.5rem 0 0 0
+    margin: 1.5rem 0 0
 }
 
 @media screen and (min-width:768px) {
@@ -1552,26 +1521,20 @@ header nav:not(.mdx-app-nav) a.current:hover {
     padding: 1rem 0
 }
 
-@media screen and (min-width:768px) {
-    .hero-cta-copy-text {
-        font-size: 1rem
-    }
-}
-
-@media screen and (min-width:768px) {
-    .hero-cta-copy-text span {
-        display: block
-    }
-}
-
 .hero-cta-start-chat-input-holder {
     background-color: #ecf6fb;
-    margin: 1rem 0 .5rem 0;
+    margin: 1rem 0 .5rem;
     padding: 0;
     border: 1px solid #cadfea
 }
 
 @media screen and (min-width:768px) {
+    .hero-cta-copy-text {
+        font-size: 1rem
+    }
+    .hero-cta-copy-text span {
+        display: block
+    }
     .hero-cta-start-chat-input-holder {
         padding-left: 3.25rem;
         border-radius: 4px
@@ -1581,7 +1544,7 @@ header nav:not(.mdx-app-nav) a.current:hover {
 .hero-cta-start-chat-input-holder input.start-chat-input {
     width: 100%;
     height: 40px;
-    border: 0 none;
+    border: 0;
     border-radius: 0;
     -webkit-appearance: none;
     background-color: transparent;
@@ -1593,18 +1556,15 @@ header nav:not(.mdx-app-nav) a.current:hover {
     outline: 0!important
 }
 
+.hero-cta-start-chat-btn-holder {
+    margin: 1rem 0 .5rem
+}
+
 @media screen and (min-width:768px) {
     .hero-cta-start-chat-input-holder input.start-chat-input {
         height: 54px;
         text-align: left
     }
-}
-
-.hero-cta-start-chat-btn-holder {
-    margin: 1rem 0 .5rem 0
-}
-
-@media screen and (min-width:768px) {
     .hero-cta-start-chat-btn-holder {
         display: inline-block;
         position: absolute;
@@ -1664,7 +1624,7 @@ header nav:not(.mdx-app-nav) a.current:hover {
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.35;
-    margin: .5rem 0 1.25rem 0
+    margin: .5rem 0 1.25rem
 }
 
 @media screen and (min-width:769px) {
@@ -1687,39 +1647,8 @@ header nav:not(.mdx-app-nav) a.current:hover {
 .landing-infographics p {
     font-size: .875rem;
     line-height: 1.5;
-    margin: .5rem 0 1.5rem 0;
+    margin: .5rem 0 1.5rem;
     font-weight: 300
-}
-
-@media screen and (min-width:768px) {
-    .landing-infographics p {
-        margin-top: 1.5rem
-    }
-}
-
-@media screen and (min-width:768px) {
-    .landing-infographics {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex
-    }
-}
-
-@media screen and (min-width:768px) {
-    .landing-infographics div {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-        padding: 0 1rem
-    }
-}
-
-@media screen and (min-width:768px) {
-    .landing-infographics div:nth-child(2) {
-        padding: 0 .25rem
-    }
 }
 
 .landing-infographics .icon {
@@ -1731,18 +1660,6 @@ header nav:not(.mdx-app-nav) a.current:hover {
     height: 46px
 }
 
-@media screen and (min-width:768px) {
-    .landing-infographics .icon.brain-puzzle-icon {
-        height: 64px
-    }
-}
-
-@media screen and (min-width:768px) {
-    .landing-infographics .icon {
-        height: 64px
-    }
-}
-
 .landing-section-heading {
     font-weight: 700;
     color: #127ec2;
@@ -1750,6 +1667,29 @@ header nav:not(.mdx-app-nav) a.current:hover {
 }
 
 @media screen and (min-width:768px) {
+    .landing-infographics p {
+        margin-top: 1.5rem
+    }
+    .landing-infographics {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex
+    }
+    .landing-infographics div {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        padding: 0 1rem
+    }
+    .landing-infographics div:nth-child(2) {
+        padding: 0 .25rem
+    }
+    .landing-infographics .icon,
+    .landing-infographics .icon.brain-puzzle-icon {
+        height: 64px
+    }
     .landing-section-heading {
         font-size: 1.5rem;
         margin-top: 0
@@ -1767,18 +1707,15 @@ header nav:not(.mdx-app-nav) a.current:hover {
     text-align: left
 }
 
-@media screen and (min-width:768px) {
-    .landing-section-heading.txt-center {
-        text-align: center
-    }
-}
-
 .about-medaux {
     display: block;
     font-weight: 300
 }
 
 @media screen and (min-width:768px) {
+    .landing-section-heading.txt-center {
+        text-align: center
+    }
     .about-medaux {
         display: -webkit-box;
         display: -webkit-flex;
@@ -1786,30 +1723,19 @@ header nav:not(.mdx-app-nav) a.current:hover {
         display: flex;
         margin-top: 3rem
     }
-}
-
-@media screen and (min-width:768px) {
     .about-medaux-copy {
         -webkit-box-flex: 2;
         -webkit-flex: 2;
         -ms-flex: 2;
         flex: 2
     }
-}
-
-@media screen and (min-width:768px) {
     .about-medaux-copy.how-to {
         padding: 0 3.5rem 0 1.5rem
     }
 }
 
 @media screen and (min-width:640px) {
-    .about-medaux-copy.how-to {
-        padding: 0
-    }
-}
-
-@media screen and (min-width:640px) {
+    .about-medaux-copy.how-to,
     .about-medaux-copy.who-is {
         padding: 0
     }
@@ -1850,16 +1776,6 @@ header nav:not(.mdx-app-nav) a.current:hover {
     font-weight: 300
 }
 
-@media screen and (min-width:1024px) {
-    .landing-secondary-description {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        padding-bottom: 3rem
-    }
-}
-
 .questions-list-container {
     padding-right: 0
 }
@@ -1878,6 +1794,13 @@ header nav:not(.mdx-app-nav) a.current:hover {
 }
 
 @media screen and (min-width:1024px) {
+    .landing-secondary-description {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding-bottom: 3rem
+    }
     .questions-list-container {
         text-align: left;
         -webkit-flex-basis: 60%;
@@ -1889,16 +1812,6 @@ header nav:not(.mdx-app-nav) a.current:hover {
 
 .landing-medaux-questions {
     display: block
-}
-
-@media screen and (min-width:640px) {
-    .landing-medaux-questions {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        margin-top: 1.5rem
-    }
 }
 
 .landing-medaux-questions .col-1 {
@@ -1928,11 +1841,19 @@ header nav:not(.mdx-app-nav) a.current:hover {
     background-color: #f2f0da
 }
 
-.landing-medaux-questions .col-1 .landing-questions-list li:nth-child(even) {
+.landing-medaux-questions .col-1 .landing-questions-list li:nth-child(even),
+.landing-medaux-questions .col-2 .landing-questions-list li:nth-child(odd) {
     background-color: #cfeafb
 }
 
 @media screen and (min-width:640px) {
+    .landing-medaux-questions {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 1.5rem
+    }
     .landing-medaux-questions .col-1 .landing-questions-list li:before {
         display: block
     }
@@ -1949,21 +1870,14 @@ header nav:not(.mdx-app-nav) a.current:hover {
     padding: 0 1rem 0 0
 }
 
-@media screen and (min-width:640px) and (max-width:1024px) {
-    .landing-medaux-questions .col-2 .landing-questions-list {
-        padding: 0 1rem 0 3.25rem
-    }
-}
-
-.landing-medaux-questions .col-2 .landing-questions-list li:nth-child(odd) {
-    background-color: #cfeafb
-}
-
 .landing-medaux-questions .col-2 .landing-questions-list li:nth-child(even) {
     background-color: #f2f0da
 }
 
 @media screen and (min-width:640px) and (max-width:1024px) {
+    .landing-medaux-questions .col-2 .landing-questions-list {
+        padding: 0 1rem 0 3.25rem
+    }
     .landing-medaux-questions .col-2 .landing-questions-list li:before {
         display: block
     }
@@ -1983,22 +1897,15 @@ header nav:not(.mdx-app-nav) a.current:hover {
     list-style: none;
     text-align: left;
     font-size: .75rem;
-    margin: 0 0 .5rem 0;
+    margin: 0 0 .5rem;
     padding: .75rem;
     border-radius: 4px;
     position: relative
 }
 
 .landing-questions-list li:before {
-    font-family: medaux-icofont!important;
-    speak: none;
-    font-style: normal;
     font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
     line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     content: "\e900";
     color: #52a1d3;
     position: absolute;
@@ -2006,12 +1913,6 @@ header nav:not(.mdx-app-nav) a.current:hover {
     left: -2.75rem;
     font-size: 2.5rem;
     display: none
-}
-
-@media screen and (min-width:768px) {
-    .landing-share-contact-us {
-        margin-top: 3rem
-    }
 }
 
 @media screen and (min-width:1024px) {
@@ -2055,6 +1956,9 @@ header nav:not(.mdx-app-nav) a.current:hover {
 }
 
 @media screen and (min-width:768px) {
+    .landing-share-contact-us {
+        margin-top: 3rem
+    }
     .landing-share-links {
         display: inline-block
     }
@@ -2124,12 +2028,6 @@ footer {
     z-index: 99
 }
 
-@media screen and (min-width:1025px) {
-    .mdx-app-header {
-        padding-left: 249px
-    }
-}
-
 .pages-header-logo {
     width: 94px;
     height: auto
@@ -2143,6 +2041,13 @@ footer {
     display: block
 }
 
+.mdx-app-aside-nav,
+.mdx-chat-room-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox
+}
+
 .mdx-app-aside-nav {
     background-color: #fff;
     position: fixed;
@@ -2152,12 +2057,7 @@ footer {
     bottom: 0;
     z-index: 999;
     box-shadow: 2px 0 4px 0 rgba(0, 0, 0, .14);
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -2178,6 +2078,9 @@ footer {
 }
 
 @media screen and (min-width:1025px) {
+    .mdx-app-header {
+        padding-left: 249px
+    }
     .mdx-app-aside-nav {
         left: 0;
         right: auto
@@ -2238,19 +2141,15 @@ footer {
 }
 
 .mdx-app-aside-menu li a:link.current,
-.mdx-app-aside-menu li a:visited.current {
-    color: #303030;
-    cursor: default
-}
-
 .mdx-app-aside-menu li a:link.current:active,
 .mdx-app-aside-menu li a:link.current:focus,
 .mdx-app-aside-menu li a:link.current:hover,
+.mdx-app-aside-menu li a:visited.current,
 .mdx-app-aside-menu li a:visited.current:active,
 .mdx-app-aside-menu li a:visited.current:focus,
 .mdx-app-aside-menu li a:visited.current:hover {
-    cursor: default;
-    color: #303030
+    color: #303030;
+    cursor: default
 }
 
 .mdx-app-aside-menu li a:active,
@@ -2286,7 +2185,7 @@ footer {
 
 .become-expert .mdx-app-aside-header {
     position: relative;
-    background: #08435c url(../img/doctors-2.svg) center bottom no-repeat;
+    background: url(../img/doctors-2.svg) center bottom no-repeat #08435c;
     background-size: cover
 }
 
@@ -2295,7 +2194,7 @@ footer {
     text-align: center;
     width: 100%;
     margin: 0;
-    padding: 0 0 1.5rem 0;
+    padding: 0 0 1.5rem;
     position: absolute;
     bottom: 0
 }
@@ -2304,11 +2203,20 @@ footer {
     width: 64px;
     height: auto;
     display: block;
-    margin: 1.75rem auto -1rem auto
+    margin: 1.75rem auto -1rem
 }
 
 .become-expert .benefits {
     text-align: left!important
+}
+
+.chat-add-attachment,
+.chat-archive-item-body,
+.chat-message-meta,
+.mdx-chat-room-aside,
+.pika-table th,
+.pika-title {
+    text-align: center
 }
 
 .become-expert .benefits .heading {
@@ -2335,17 +2243,20 @@ footer {
 
 .mdx-chat-room-container {
     font-weight: 300;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
     position: fixed;
     top: 80px;
     bottom: 16px;
-    /*bottom: 0;*/
     padding-left: 16px;
     padding-right: 16px
+}
+
+.mdx-chat-room-inner,
+.mdx-chat-room-main {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox
 }
 
 @media screen and (min-width:1025px) {
@@ -2364,34 +2275,30 @@ footer {
 }
 
 .mdx-chat-room-main {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex
-}
-
-@media screen and (min-width:1200px) {
-    .mdx-chat-room-main {
-        padding-right: 1rem
-    }
 }
 
 .mdx-chat-room-inner {
     background-color: #e7ebef;
     width: 100%;
     margin: 0 auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
 }
 
+.chat-participant-box,
+.mdx-chat-message {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox
+}
+
 @media screen and (min-width:1200px) {
+    .mdx-chat-room-main {
+        padding-right: 1rem
+    }
     .mdx-chat-room-inner {
         max-width: 720px
     }
@@ -2403,17 +2310,7 @@ footer {
     min-height: 72px;
     position: relative;
     z-index: 9;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex
-}
-
-@media screen and (min-width:640px) {
-    .chat-participant-box {
-        padding: 1.25rem 1rem 1.75rem 1rem!important;
-        min-height: 84px
-    }
 }
 
 .chat-participant-box .chat-participant-photo {
@@ -2422,6 +2319,10 @@ footer {
 }
 
 @media screen and (min-width:640px) {
+    .chat-participant-box {
+        padding: 1.25rem 1rem 1.75rem!important;
+        min-height: 84px
+    }
     .chat-participant-box .chat-participant-photo {
         width: 48px;
         height: 48px
@@ -2442,12 +2343,6 @@ footer {
     flex: 1
 }
 
-@media screen and (min-width:640px) {
-    .chat-participant-box .chat-participant-meta {
-        padding-left: .75rem
-    }
-}
-
 .chat-participant-box .chat-participant-additional-info {
     font-size: .875rem
 }
@@ -2456,27 +2351,23 @@ footer {
     display: none
 }
 
-@media screen and (min-width:640px) {
-    .chat-participant-box .chat-participant-additional-info .speciality {
-        display: inline-block
-    }
-}
-
 .chat-participant-box .chat-participant-additional-info .end-chat {
     display: inline-block
 }
 
 @media screen and (min-width:640px) {
+    .chat-participant-box .chat-participant-meta {
+        padding-left: .75rem
+    }
+    .chat-participant-box .chat-participant-additional-info .speciality {
+        display: inline-block
+    }
     .chat-participant-box .chat-participant-additional-info .end-chat {
         display: none
     }
 }
 
-.chat-participant-box .chat-participant-additional-info .end-chat a {
-    text-transform: uppercase;
-    font-weight: 500
-}
-
+.chat-participant-box .chat-participant-additional-info .end-chat a,
 .chat-participant-box .more {
     text-transform: uppercase;
     font-weight: 500
@@ -2497,20 +2388,14 @@ footer {
 
 @media screen and (min-width:640px) {
     .chat-tools-switcher-btn {
-        display: inline-block
-    }
-}
-
-@media screen and (min-width:640px) {
-    .chat-tools-switcher-btn {
+        display: inline-block;
         width: 48px;
-        height: 48px
-    }
-}
-
-@media screen and (min-width:640px) {
-    .chat-tools-switcher-btn {
+        height: 48px;
         margin-right: .25rem
+    }
+    .chat-tools-switcher-btn.end-chat {
+        width: 116px;
+        border-radius: 48px
     }
 }
 
@@ -2536,13 +2421,6 @@ footer {
     background-color: #c5e9fd
 }
 
-@media screen and (min-width:640px) {
-    .chat-tools-switcher-btn.end-chat {
-        width: 116px;
-        border-radius: 48px
-    }
-}
-
 @media screen and (min-width:1200px) {
     .chat-tools-switcher-btn.end-chat {
         width: 48px;
@@ -2564,10 +2442,18 @@ footer {
     display: inline-block
 }
 
+.chat-tools-switcher-btn.end-chat .icon {
+    left: 50%;
+    z-index: 2
+}
+
 @media screen and (min-width:640px) {
     .chat-tools-switcher-btn.end-chat:after {
         width: 48px;
         height: 48px
+    }
+    .chat-tools-switcher-btn.end-chat .icon {
+        left: 24px
     }
 }
 
@@ -2575,20 +2461,6 @@ footer {
     .chat-tools-switcher-btn.end-chat:after {
         display: none
     }
-}
-
-.chat-tools-switcher-btn.end-chat .icon {
-    left: 50%;
-    z-index: 2
-}
-
-@media screen and (min-width:640px) {
-    .chat-tools-switcher-btn.end-chat .icon {
-        left: 24px
-    }
-}
-
-@media screen and (min-width:1200px) {
     .chat-tools-switcher-btn.end-chat .icon {
         left: 50%
     }
@@ -2620,19 +2492,18 @@ footer {
     -ms-flex-positive: 1;
     flex-grow: 1;
     overflow-y: auto;
-    padding: 1rem .5rem 0 .5rem;
+    padding: 1rem .5rem 0;
     margin-bottom: -1rem
 }
 
 @media screen and (min-width:640px) {
     .mdx-chat-messages-container {
-        padding: 1rem 1rem 0 1rem
+        padding: 1rem 1rem 0
     }
 }
 
 .chat-message-meta {
-    padding: 0 .5rem 0 0;
-    text-align: center
+    padding: 0 .5rem 0 0
 }
 
 .chat-message-meta .time-stamp {
@@ -2643,9 +2514,6 @@ footer {
 }
 
 .mdx-chat-message {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
     margin-bottom: 1rem
@@ -2690,21 +2558,8 @@ footer {
     font-size: 38px
 }
 
-@media screen and (min-width:640px) {
-    .mdx-chat-message .user-avatar [class*=" icon-"],
-    .mdx-chat-message .user-avatar [class^=icon-] {
-        font-size: 3rem
-    }
-}
-
 .mdx-chat-message.received-message .mdx-chat-message-text {
     padding-left: .5rem
-}
-
-@media screen and (min-width:640px) {
-    .mdx-chat-message.received-message .mdx-chat-message-text {
-        padding-left: 1rem
-    }
 }
 
 .mdx-chat-message.received-message .mdx-chat-message-bubble:after {
@@ -2723,6 +2578,13 @@ footer {
 }
 
 @media screen and (min-width:640px) {
+    .mdx-chat-message .user-avatar [class*=" icon-"],
+    .mdx-chat-message .user-avatar [class^=icon-] {
+        font-size: 3rem
+    }
+    .mdx-chat-message.received-message .mdx-chat-message-text {
+        padding-left: 1rem
+    }
     .mdx-chat-message.received-message .mdx-chat-message-bubble:after {
         top: 27px
     }
@@ -2736,10 +2598,7 @@ footer {
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
     -ms-flex-order: 2;
-    order: 2
-}
-
-.mdx-chat-message.sent-message .chat-message-meta {
+    order: 2;
     padding: 0 0 0 .5rem
 }
 
@@ -2749,12 +2608,6 @@ footer {
     -ms-flex-order: 1;
     order: 1;
     padding-right: .5rem
-}
-
-@media screen and (min-width:640px) {
-    .mdx-chat-message.sent-message .mdx-chat-message-text {
-        padding-right: 1rem
-    }
 }
 
 .mdx-chat-message.sent-message .mdx-chat-message-bubble {
@@ -2778,6 +2631,9 @@ footer {
 }
 
 @media screen and (min-width:640px) {
+    .mdx-chat-message.sent-message .mdx-chat-message-text {
+        padding-right: 1rem
+    }
     .mdx-chat-message.sent-message .mdx-chat-message-bubble:after {
         top: 27px
     }
@@ -2793,12 +2649,7 @@ footer {
 
 @media screen and (min-width:640px) {
     .mdx-chat-message-bubble {
-        padding: 1rem
-    }
-}
-
-@media screen and (min-width:640px) {
-    .mdx-chat-message-bubble {
+        padding: 1rem;
         min-height: 54px
     }
 }
@@ -2811,21 +2662,10 @@ footer {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    align-items: center;
     padding-left: .5rem!important;
-    /*padding-top: .75rem!important;*/
+    padding-top: .75rem!important;
     padding-right: .5rem!important;
-    /*min-height: 64px*/
-    min-height: 85px;
-}
-
-@media screen and (min-width:640px) {
-    .mdx-chat-message-entry-box {
-        padding-left: 1rem!important;
-        /*padding-top: 1.25rem!important;*/
-        padding-right: 1rem!important;
-        min-height: 151.6px
-    }
+    min-height: 64px
 }
 
 .mdx-chat-message-entry-box .chat-send-btn {
@@ -2835,13 +2675,6 @@ footer {
     border-radius: 50%;
     background-color: #00b4ec;
     position: relative
-}
-
-@media screen and (min-width:640px) {
-    .mdx-chat-message-entry-box .chat-send-btn {
-        width: 48px;
-        height: 48px
-    }
 }
 
 .mdx-chat-message-entry-box .chat-send-btn:before {
@@ -2864,28 +2697,31 @@ footer {
 }
 
 @media screen and (min-width:640px) {
-    .mdx-chat-message-entry-box .chat-send-btn:before {
-        font-size: 1.5rem
+    .mdx-chat-message-entry-box {
+        padding-left: 1rem!important;
+        padding-top: 1.25rem!important;
+        padding-right: 1rem!important;
+        min-height: 84px
     }
-}
-
-@media screen and (min-width:640px) {
+    .mdx-chat-message-entry-box .chat-send-btn {
+        width: 48px;
+        height: 48px
+    }
     .mdx-chat-message-entry-box .chat-send-btn:before {
+        font-size: 1.5rem;
         margin: -.75rem auto auto -.75rem
     }
 }
 
+.mdx-chat-message-entry-box .chart-participant {
+    display: none;
+    margin-left: auto;
+    width: 48px
+}
 
 .mdx-chat-message-entry-box .chat-participant-photo {
     width: 38px;
     height: 38px
-}
-
-@media screen and (min-width:640px) {
-    .mdx-chat-message-entry-box .chat-participant-photo {
-        width: 48px;
-        height: 48px
-    }
 }
 
 .mdx-chat-message-entry-box .user-avatar .icon {
@@ -2893,8 +2729,18 @@ footer {
 }
 
 @media screen and (min-width:640px) {
+    .mdx-chat-message-entry-box .chart-participant {
+        display: inline-block
+    }
+    .mdx-chat-message-entry-box .chat-participant-photo {
+        width: 48px;
+        height: 48px
+    }
     .mdx-chat-message-entry-box .user-avatar .icon {
         font-size: 3rem
+    }
+    .mdx-chat-message-entry-box .mdx-chat-input {
+        padding-right: 1.5rem
     }
 }
 
@@ -2909,12 +2755,6 @@ footer {
     flex: 1
 }
 
-@media screen and (min-width:640px) {
-    .mdx-chat-message-entry-box .mdx-chat-input {
-        padding-right: 1.5rem
-    }
-}
-
 .mdx-chat-message-entry-box .mdx-textfield {
     display: inline-block;
     padding-top: 0!important;
@@ -2926,15 +2766,14 @@ footer {
     flex: 1
 }
 
-/*@media screen and (min-width:640px) {
+@media screen and (min-width:640px) {
     .mdx-chat-message-entry-box .mdx-textfield {
         padding-top: .5rem!important;
         padding-right: 1.5rem
     }
-}*/
+}
 
 .chat-add-attachment {
-    text-align: center;
     text-transform: uppercase;
     width: 38px;
     padding-top: .5rem
@@ -2959,17 +2798,14 @@ footer {
     width: 32px
 }
 
-@media screen and (min-width:640px) {
-    .chat-add-attachment a {
-        width: 100%
-    }
-}
-
 .chat-add-attachment .label {
     display: none
 }
 
 @media screen and (min-width:640px) {
+    .chat-add-attachment a {
+        width: 100%
+    }
     .chat-add-attachment .label {
         display: block;
         font-size: .75rem;
@@ -2982,14 +2818,11 @@ footer {
     -webkit-flex: 0 0 296px;
     -ms-flex: 0 0 296px;
     flex: 0 0 296px;
-    text-align: center;
     background-color: #fff;
     border-radius: 4px;
     border: 1px solid #e9e9e9;
-    padding: 2rem 0 0 0;
+    padding: 2rem 0 0;
     display: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
@@ -3004,19 +2837,24 @@ footer {
     }
 }
 
+.mdx-chat-room-aside .chat-participant-location .country,
+.pika-single {
+    display: block
+}
+
 .mdx-chat-room-aside .subheading {
-    margin: 0 0 1rem 0;
+    margin: 0 0 1rem;
     padding: 0
 }
 
 .mdx-chat-room-aside .chat-participant-photo {
-    margin: 0 auto 1rem auto;
+    margin: 0 auto 1rem;
     width: 88px;
     height: 88px
 }
 
 .mdx-chat-room-aside .chat-participant-additional-info {
-    margin: 0 0 1rem 0;
+    margin: 0 0 1rem;
     padding: 0
 }
 
@@ -3037,20 +2875,16 @@ footer {
     opacity: .75
 }
 
-.mdx-chat-room-aside .chat-participant-location .country {
-    display: block
-}
-
 .mdx-chat-room-aside .chat-participant-location p {
-    margin: .5rem 0 .25rem 0;
+    margin: .5rem 0 .25rem;
     opacity: .65
 }
 
 .mdx-chat-room-aside .elapsed-time-box {
     line-height: 1;
     width: 90%;
-    margin: 1.25rem auto 1rem auto;
-    padding: .75rem 0 .5rem 0;
+    margin: 1.25rem auto 1rem;
+    padding: .75rem 0 .5rem;
     background-color: rgba(202, 209, 217, .41);
     border-radius: 6px
 }
@@ -3060,7 +2894,7 @@ footer {
     color: #77838b;
     font-weight: 300;
     text-transform: uppercase;
-    margin: 0 0 .25rem 0;
+    margin: 0 0 .25rem;
     padding: 0
 }
 
@@ -3081,7 +2915,6 @@ footer {
 
 .pika-single {
     z-index: 9999;
-    display: block;
     position: relative;
     color: #333;
     background: #fff;
@@ -3116,8 +2949,7 @@ footer {
 }
 
 .pika-title {
-    position: relative;
-    text-align: center
+    position: relative
 }
 
 .pika-title select {
@@ -3130,9 +2962,14 @@ footer {
     opacity: 0
 }
 
+.mdx-selectfield,
+.pika-label,
+select {
+    position: relative
+}
+
 .pika-label {
     display: inline-block;
-    position: relative;
     z-index: 9999;
     overflow: hidden;
     margin: 0;
@@ -3162,6 +2999,11 @@ footer {
     background-repeat: no-repeat;
     background-size: 75% 75%;
     opacity: .5
+}
+
+.mdx-textfield input[type=text],
+select {
+    height: 32px
 }
 
 .pika-next:hover,
@@ -3208,8 +3050,7 @@ footer {
     color: #999;
     font-size: 12px;
     line-height: 25px;
-    font-weight: 700;
-    text-align: center
+    font-weight: 700
 }
 
 .pika-table abbr {
@@ -3220,7 +3061,6 @@ footer {
 .pika-button {
     cursor: pointer;
     display: block;
-    box-sizing: border-box;
     outline: 0;
     border: 0;
     margin: 0;
@@ -3231,6 +3071,12 @@ footer {
     line-height: 15px;
     text-align: right;
     background: #f5f5f5
+}
+
+.is-disabled .pika-button,
+.pika-button .is-selection-disabled {
+    pointer-events: none;
+    cursor: default
 }
 
 .is-today .pika-button {
@@ -3252,21 +3098,11 @@ footer {
     opacity: .3
 }
 
-.is-disabled .pika-button {
-    pointer-events: none;
-    cursor: default
-}
-
 .pika-button:hover {
     color: #fff;
     background: #ff8000;
     box-shadow: none;
     border-radius: 3px
-}
-
-.pika-button .is-selection-disabled {
-    pointer-events: none;
-    cursor: default
 }
 
 .pika-week {
@@ -3300,7 +3136,6 @@ select {
     font-family: inherit;
     background-color: transparent;
     width: 100%;
-    height: 32px;
     padding: .25rem 0 .25rem .25rem;
     font-size: 1rem;
     color: #000;
@@ -3308,7 +3143,6 @@ select {
     border: none;
     border-radius: 0;
     border-bottom: 1px solid #ababab;
-    position: relative;
     z-index: 10
 }
 
@@ -3325,10 +3159,6 @@ select {
 .mdx-selectfield select:focus {
     outline: 0;
     border-bottom: 2px solid #303030
-}
-
-.mdx-selectfield {
-    position: relative
 }
 
 .mdx-selectfield:before {
@@ -3385,48 +3215,21 @@ select {
     font-size: 1rem;
     font-weight: 300;
     font-family: inherit;
-    line-height: inherit;
-}
-
-/******************
-CHAT BOX STYLES
-*******************/
-
-textarea.chat-textarea{
-    border: none;
-    resize: none;
-    padding-top: 1.333rem;
-    font-size: .75rem;
-    margin-left: .75rem;
-}
-
-@media screen and (min-width: 640px){
-    textarea.chat-textarea{
-        font-size: 1rem;
-        margin-left: 2.6rem;
-    }
-}
-
-.chart-participant{
-    display: none;
-}
-
-.mdx-textfield input[type=text] {
-    height: 32px
+    line-height: inherit
 }
 
 .mdx-textfield input[type=text]:disabled {
     color: #ccc
 }
 
-/*.mdx-textfield>input:focus,
+.mdx-textfield>input:focus,
 .mdx-textfield>textarea:focus {
     border-bottom-width: 2px;
     border-bottom-color: #303030;
     height: 33px;
     margin-bottom: -1px
 }
-*/
+
 .mdx-textfield-label {
     position: absolute;
     top: 0;
@@ -3441,9 +3244,9 @@ textarea.chat-textarea{
     white-space: nowrap
 }
 
-/*.mdx-textfield>textarea {
+.mdx-textfield>textarea {
     min-height: 78px
-}*/
+}
 
 .mdx-textfield-verified-label {
     position: absolute;
@@ -3453,6 +3256,19 @@ textarea.chat-textarea{
     right: .125rem;
     top: 48px;
     color: #7bae26
+}
+
+.datepicker-holder:after,
+.general-info-add-photo:before {
+    font-family: medaux-icofont!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1
 }
 
 .mdx-profile-cards-row {
@@ -3474,7 +3290,7 @@ textarea.chat-textarea{
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    margin: 0 .5rem 1rem .5rem
+    margin: 0 .5rem 1rem
 }
 
 .mdx-profile-textfields-row {
@@ -3496,7 +3312,7 @@ textarea.chat-textarea{
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    margin: 0 .75rem 20px .75rem
+    margin: 0 .75rem 20px
 }
 
 .mdx-profile-textfields-row.row-2-1 div:nth-child(1) {
@@ -3513,13 +3329,7 @@ textarea.chat-textarea{
     flex: 1
 }
 
-.mdx-profile-textfields-row.row-3-3-1 div:nth-child(1) {
-    -webkit-box-flex: 3;
-    -webkit-flex: 3;
-    -ms-flex: 3;
-    flex: 3
-}
-
+.mdx-profile-textfields-row.row-3-3-1 div:nth-child(1),
 .mdx-profile-textfields-row.row-3-3-1 div:nth-child(2) {
     -webkit-box-flex: 3;
     -webkit-flex: 3;
@@ -3542,9 +3352,6 @@ textarea.chat-textarea{
     .mdx-profile-textfields-row .dummy {
         display: block
     }
-}
-
-@media screen and (min-width:640px) {
     .general-info-body {
         display: -webkit-box;
         display: -webkit-flex;
@@ -3563,6 +3370,15 @@ textarea.chat-textarea{
     font-size: 5rem
 }
 
+.general-info-add-photo [class*=" icon-"],
+.general-info-add-photo [class^=icon-],
+.general-info-add-photo:before {
+    font-size: 1.325rem;
+    color: #145a71;
+    position: relative;
+    top: 2px
+}
+
 .general-info-user-avatar .chat-participant-photo {
     width: 80px;
     height: 80px;
@@ -3570,29 +3386,17 @@ textarea.chat-textarea{
     margin: 0 auto
 }
 
-.general-info-add-photo [class*=" icon-"],
-.general-info-add-photo [class^=icon-] {
-    font-size: 1.325rem;
-    color: #145a71;
-    position: relative;
-    top: 2px
+.chat-archive-item,
+.mdx-authorization-form-in-popup {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal
 }
 
 .general-info-add-photo:before {
-    font-family: medaux-icofont!important;
-    speak: none;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     content: "\e912";
-    font-size: 1.325rem;
-    color: #145a71;
-    position: relative;
-    top: 2px;
     left: -.625rem
 }
 
@@ -3601,15 +3405,6 @@ textarea.chat-textarea{
 }
 
 .datepicker-holder:after {
-    font-family: medaux-icofont!important;
-    speak: none;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     content: "\e913";
     position: absolute;
     right: .125rem;
@@ -3632,16 +3427,11 @@ textarea.chat-textarea{
 .mdx-archive-card {
     margin-bottom: .5rem;
     line-height: 1;
-    padding: 1rem 1.25rem .25rem 1.25rem
+    padding: 1rem 1.25rem .25rem
 }
 
 .chat-archive-item {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -3649,8 +3439,8 @@ textarea.chat-textarea{
     padding-bottom: .25rem!important
 }
 
-.chat-archive-item-body {
-    text-align: center
+.chat-archive-item-participant {
+    padding: 0 0 1rem
 }
 
 @media screen and (min-width:580px) {
@@ -3663,13 +3453,6 @@ textarea.chat-textarea{
         overflow: hidden;
         text-align: left
     }
-}
-
-.chat-archive-item-participant {
-    padding: 0 0 1rem 0
-}
-
-@media screen and (min-width:580px) {
     .chat-archive-item-participant {
         padding: 0 1.5rem 1rem 0
     }
@@ -3678,7 +3461,7 @@ textarea.chat-textarea{
 .chat-participant-name {
     font-size: 1.125rem;
     font-weight: 700;
-    margin: 0 0 .5rem 0;
+    margin: 0 0 .5rem;
     padding: 0;
     width: 99%;
     overflow: hidden;
@@ -3720,6 +3503,12 @@ textarea.chat-textarea{
     display: inline-block
 }
 
+.modal,
+body.modal-open {
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
 .chat-participant-photo img {
     display: inline;
     margin: 0 auto;
@@ -3735,7 +3524,7 @@ textarea.chat-textarea{
 
 .chat-archive-item-footer {
     border-top: 1px solid #eee;
-    padding: 1rem .5rem 0 .5rem;
+    padding: 1rem .5rem 0;
     margin-left: -1rem;
     margin-right: -1rem;
     font-size: .875rem;
@@ -3748,13 +3537,28 @@ textarea.chat-textarea{
     text-align: center
 }
 
+.chat-archive-item-footer .date-time:before,
+.chat-archive-item-footer .duration:before {
+    font-family: medaux-icofont!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1.5em;
+    top: -.25rem
+}
+
 @media screen and (min-width:480px) {
     .chat-archive-item-footer {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        padding: .25rem 1rem 0 1rem
+        padding: .25rem 1rem 0
     }
 }
 
@@ -3769,19 +3573,8 @@ textarea.chat-textarea{
 }
 
 .chat-archive-item-footer .duration:before {
-    font-family: medaux-icofont!important;
-    speak: none;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     content: "\e916";
-    font-size: 1.5em;
     position: absolute;
-    top: -.25rem;
     left: .625rem
 }
 
@@ -3792,32 +3585,18 @@ textarea.chat-textarea{
     position: relative
 }
 
-@media screen and (min-width:480px) {
-    .chat-archive-item-footer .date-time {
-        padding-left: 1.5rem;
-        text-align: left
-    }
-}
-
 .chat-archive-item-footer .date-time:before {
-    font-family: medaux-icofont!important;
-    speak: none;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     content: "\e913";
-    font-size: 1.5em;
     position: absolute;
-    top: -.25rem;
     left: 1rem;
     display: none
 }
 
 @media screen and (min-width:480px) {
+    .chat-archive-item-footer .date-time {
+        padding-left: 1.5rem;
+        text-align: left
+    }
     .chat-archive-item-footer .date-time:before {
         left: 0;
         display: inline-block
@@ -3827,12 +3606,18 @@ textarea.chat-textarea{
 .md-checkbox {
     position: relative;
     height: 20px;
-    margin: .5rem 0 1.5rem 0
+    margin: .5rem 0 1.5rem
 }
 
 @media screen and (min-width:680px) {
     .md-checkbox {
-        margin: .5rem 0 0 0
+        margin: .5rem 0 0
+    }
+    .register-tos-container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex
     }
 }
 
@@ -3882,25 +3667,11 @@ textarea.chat-textarea{
     border-right-style: none
 }
 
-@media screen and (min-width:680px) {
-    .register-tos-container {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex
-    }
-}
-
 .register-tos-container .md-checkbox {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1
-}
-
-body.modal-open {
-    overflow-x: hidden;
-    overflow-y: auto
 }
 
 .modal {
@@ -3912,9 +3683,7 @@ body.modal-open {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    overflow-x: hidden;
-    overflow-y: auto
+    bottom: 0
 }
 
 .modal .modal-dialog {
@@ -3929,12 +3698,7 @@ body.modal-open {
 }
 
 .mdx-authorization-form-in-popup {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
@@ -4089,6 +3853,16 @@ body.modal-open {
     cursor: pointer
 }
 
+.mdx-app-container,
+.mdx-app-main-section {
+    background-color: #f5f5f5;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal
+}
+
 .mdx-textfield-forgot-password-label {
     position: absolute;
     font-size: 11px;
@@ -4111,15 +3885,9 @@ body.modal-open {
 }
 
 .mdx-app-container {
-    background-color: #f5f5f5;
     width: 100%;
     height: 100vh;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -4133,18 +3901,12 @@ body.modal-open {
 }
 
 .mdx-app-main-section {
-    background-color: #f5f5f5;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem 1rem 0;
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
