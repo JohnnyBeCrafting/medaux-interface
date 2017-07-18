@@ -76,33 +76,33 @@
                     <div>
                         <div class="mdx-profile-textfields-row">
                             <div class="mdx-textfield">
-                                <input type="text" value="Jane">
-                                <label class="mdx-textfield-label">First name</label>
+                                <input type="text" value="Jane" id="first_name">
+                                <label class="mdx-textfield-label" for="first_name">First name</label>
                             </div>
                             <div class="mdx-textfield">
-                                <input type="text" value="">
-                                <label class="mdx-textfield-label">Middle name</label>
+                                <input type="text" value="" id="middle_name">
+                                <label class="mdx-textfield-label" for="middle_name">Middle name</label>
                             </div>
                             <div class="mdx-textfield">
-                                <input type="text" value="Joe">
-                                <label class="mdx-textfield-label">Last name</label>
+                                <input type="text" value="Joe" id="last_name">
+                                <label class="mdx-textfield-label" for="last_name">Last name</label>
                             </div>
                         </div>
                         <div class="mdx-profile-textfields-row">
                             <div class="mdx-textfield datepicker-holder">
                                 <input type="text" value="02/11/1973" id="birth-date-picker">
-                                <label class="mdx-textfield-label">Date of birth</label>
+                                <label class="mdx-textfield-label" for="birth-date-picker">Date of birth</label>
                             </div>
                             <div class="mdx-textfield">
                                 <div class="mdx-selectfield">
-                                    <select class="browser-default">
+                                    <select class="browser-default" id="gender">
                                         <option value="" disabled>Please choose</option>
                                         <option value="1" selected>Female</option>
                                         <option value="2">Male</option>
                                         <option value="3">Prefer not to answer</option>
                                     </select>
                                 </div>
-                                <label class="mdx-textfield-label">Gender</label>
+                                <label class="mdx-textfield-label" for="gender">Gender</label>
                             </div>
                             <div class="mdx-textfield dummy">&nbsp;</div>
                         </div>
@@ -125,8 +125,8 @@
                         </div>
                     </div>
                     <div class="mdx-textfield">
-                        <input type="text" value="">
-                        <label class="mdx-textfield-label">Other</label>
+                        <input type="text" value="" id="other_interest">
+                        <label class="mdx-textfield-label" for="other_interest">Other</label>
                     </div>
                 </div>
                 <div class="mdx-card mdx-profile-card">
@@ -135,13 +135,13 @@
                     </div>
                     <div class="mdx-profile-textfields-row row-2-1">
                         <div class="mdx-textfield">
-                            <input type="text" value="Eichelbergertown">
-                            <label class="mdx-textfield-label">City</label>
+                            <input type="text" value="Eichelbergertown" id="city">
+                            <label class="mdx-textfield-label" for="city">City</label>
                         </div>
                         <div class="mdx-textfield">
                             <div class="mdx-selectfield">
-                                <select class="browser-default">
-                                    <option value="" disabled>Please choose</option>
+                                <select class="browser-default" id="state">
+                                    <option value="">Please choose</option>
                                     <option value="AL">AL</option>
                                     <option value="AK">AK</option>
                                     <option value="AZ">AZ</option>
@@ -195,12 +195,12 @@
                                     <option value="WY">WY</option>
                                 </select>
                             </div>
-                            <label class="mdx-textfield-label">State</label>
+                            <label class="mdx-textfield-label" for="state">State</label>
                         </div>
                     </div>
                     <div class="mdx-textfield">
                         <div class="mdx-selectfield">
-                            <select class="browser-default">
+                            <select class="browser-default" id="country">
                                 <option value="" disabled>Please choose</option>
                                 <option value="AF">Afghanistan</option>
                                 <option value="AX">Åland Islands</option>
@@ -453,7 +453,7 @@
                                 <option value="ZW">Zimbabwe</option>
                             </select>
                         </div>
-                        <label class="mdx-textfield-label">Country</label>
+                        <label class="mdx-textfield-label" for="country">Country</label>
                     </div>
                 </div>
             </div>
@@ -472,17 +472,17 @@
                 </div>
                 <div class="mdx-profile-textfields-row">
                     <div class="mdx-textfield">
-                        <input type="text" value="janejoe" disabled>
-                        <label class="mdx-textfield-label">Nickname (Username)</label>
+                        <input type="text" value="janejoe" id="username" >
+                        <label class="mdx-textfield-label" for="username">Nickname (Username)</label>
                     </div>
                     <div class="mdx-textfield verified">
-                        <input type="text" value="janejoe@hotmail.com" disabled>
-                        <label class="mdx-textfield-label">Email</label>
+                        <input type="text" value="janejoe@hotmail.com" id="email">
+                        <label class="mdx-textfield-label" for="email">Email</label>
                         <label class="mdx-textfield-verified-label">verified</label>
                     </div>
                     <div class="mdx-textfield">
-                        <input type="password" value="" placeholder="***********" disabled>
-                        <label class="mdx-textfield-label">Password</label>
+                        <input type="password" value="" placeholder="***********" id="password">
+                        <label class="mdx-textfield-label" for="password">Password</label>
                     </div>
                 </div>
                 <div class="card-footer">
