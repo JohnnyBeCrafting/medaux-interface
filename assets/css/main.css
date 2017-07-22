@@ -2662,10 +2662,11 @@ footer {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    align-items: center;
     padding-left: .5rem!important;
     padding-top: .75rem!important;
     padding-right: .5rem!important;
-    min-height: 64px
+    min-height: 113px
 }
 
 .mdx-chat-message-entry-box .chat-send-btn {
@@ -2699,10 +2700,11 @@ footer {
 @media screen and (min-width:640px) {
     .mdx-chat-message-entry-box {
         padding-left: 1rem!important;
-        padding-top: 1.25rem!important;
+        /*padding-top: 1.25rem!important;*/
         padding-right: 1rem!important;
-        min-height: 84px
+        min-height: 130px;
     }
+
     .mdx-chat-message-entry-box .chat-send-btn {
         width: 48px;
         height: 48px
@@ -3218,6 +3220,7 @@ select {
     line-height: inherit
 }
 
+
 .mdx-textfield input[type=text]:disabled {
     color: #ccc
 }
@@ -3248,6 +3251,22 @@ select {
     min-height: 78px
 }
 
+.chat-textarea{
+    min-height: 115px !important;
+    border: none !important;
+    resize: none;
+    font-size: .75rem !important;
+    border-bottom: none !important;
+    padding-top: 3rem !important;
+    padding-left: 1rem !important;
+}
+
+@media screen and (min-width: 640px){
+    .chat-textarea{
+        padding-top: 3rem !important;
+        font-size: 1rem !important;
+    } 
+}
 .mdx-textfield-verified-label {
     position: absolute;
     font-size: 11px;
@@ -3778,9 +3797,9 @@ body.modal-open {
     margin-top: 2.5rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
 }
 
 @media screen and (min-width:640px) {
@@ -3808,6 +3827,9 @@ body.modal-open {
     order: 2
 }
 
+.modal-form-footer .b-primary{
+    margin-bottom: .75rem !important;
+}
 @media screen and (min-width:640px) {
     .mdx-authorization-form-in-popup .modal-form-footer:nth-child(odd) {
         -webkit-box-ordinal-group: 2;
@@ -3834,6 +3856,13 @@ body.modal-open {
         order: 2;
         margin-left: .5rem;
         margin-bottom: 0
+    }
+    .modal-form-footer{
+        flex-direction: row !important;
+        justify-content: space-between !important;
+    }
+    .modal-form-footer button{
+        flex-basis: 48% !important;
     }
 }
 
