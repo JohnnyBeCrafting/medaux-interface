@@ -4060,3 +4060,190 @@ body.modal-open {
     display: inline-block;
     margin-right: 1rem
 }
+
+
+/***************************************************************************
+                        MOBILE STYLES FOR MYFEED 
+****************************************************************************/
+@font-face {
+   font-family: avenir;
+   src: url('../fonts/avenir.ttc');
+}
+
+.pad-vertical{
+    padding: 1rem 0;
+}
+
+.primary-body-color{
+    color: #303030;
+}
+
+
+/*my feed styles*/
+.avatar_wrapper{
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+        background-color: #e9ebee;
+        margin-bottom: 1.3rem;
+}
+.avatar_unit{
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+/*icon button styles*/
+.icon_btn{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+
+/*Avatar styles*/
+.avatar_unit_img-wrapper{
+    max-width: 100%;
+}
+
+.avatar_unit_img-wrapper img{
+    height: 80px;
+    width: 80px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.article_avatar-img img{
+    height: 60px;
+    width: 60px;
+}
+.avatar_img_shadow{
+    border-radius: 100%;
+    box-shadow: 1px 1px 4px rgba(50,70,100,.85);
+}
+
+
+
+
+/*my-feed article card styles*/
+.article_post_unit{
+    background-color: #00B4EC;
+    padding: 0.75rem;
+    margin-bottom: 3.9rem;
+    padding-bottom: 1.75rem;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.5);
+}
+
+/*my-feed post header styles*/
+.article-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 0;
+    border-bottom: 1px solid #f8f8f8;
+    margin-bottom: 1.3rem;
+}
+.article_icon-wrapper{
+    color: #fff;
+}
+.article_avatar-unit{
+    display: flex;
+}
+.article_avatar-unit a{
+    display: flex;
+}
+.article_body_bg_image{
+    background-image: url('../img/medaux_img_flu_two.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    padding: 5rem 0;
+    margin-bottom: 1.3rem;
+}
+
+/*my-feed post body styles*/
+
+.article_body_wrapper{
+    background-color: #f4f4f4;
+    padding: .75rem;
+    margin-bottom: 1.75rem;
+}
+.article_card{
+    border-radius: 5px;
+    box-shadow: -2px 5px 4px 0px rgba(74, 80, 94, 0.8), 2px 4px 1px 0px rgba(100,100,200,0.3);
+}
+.article_post-title{
+    color: #303030;
+    padding: 0 1.3rem;
+}
+.article_avatar-author{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+.article_avatar-author span{
+    font-family: avenir;
+    color: #f4f4f4;
+}
+.article_avatar-author abbr{
+    color: #eff3f6;
+    font-size: .75rem;
+}
+.article_author-blurb{
+    font-family: avenir;
+}
+.article_author-blurb p{
+    padding-top: 1.75rem;
+}
+
+.article_body_post-title{
+    box-shadow: inset 1px 1px 4px rgba(20, 20, 20, 0.5);
+    padding: 1.3rem;
+}
+
+.article_body_post-title h1{
+    margin: 0 !important;
+}
+
+/*my-feed post footer and stats styles*/
+
+.article_stat_unit{
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.3rem;
+    border-bottom: 1px solid #f8f8f8;
+    text-align: center;
+}
+.white_text{
+    color: #fff;
+}
+.article_footer_user-like > a > i{
+    color: #fff;
+}
+.article_footer_user-action{
+    display: flex;
+    padding: 1.3rem;
+}
+.article_footer_user-action_left{
+    display: flex;
+    flex-grow: 2;
+}
+
+.article_footer_user-like:first-child{
+    margin-right: .75rem;
+}
+
