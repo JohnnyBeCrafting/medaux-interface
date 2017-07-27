@@ -4213,8 +4213,6 @@ body.modal-open {
     background-color: #0b4468;
     padding: 0.75rem;
     margin-bottom: 3.9rem;
-    border-radius: 10px;
-    box-shadow: inset 1px -2px 8px 1px rgba(240,240,240,0.5);
 }
 
 /*my-feed post header styles*/
