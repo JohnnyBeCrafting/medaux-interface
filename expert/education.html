@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    MedAux - Connect to a health expert to answer your questions instantly
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <!-- <link rel='stylesheet' href='../assets/css/main.min.css'> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel='stylesheet' href='../assets/css/main.css'>
+</head>
+<body>
+
+<div class="mdx-app-container">
+    <header class="mdx-app-header">
+        <a class="pages-header-logo-link" href="../index.html"><img class="pages-header-logo" src="../assets/img/medaux-full-logo.svg"></a>
+        <a class="mdx-app-mobile-menu-switcher" href="javascript:void(0);"></a>
+        <aside class="mdx-app-aside-nav">
+            <div class="mdx-app-aside-header">
+                    <div class="chat-participant-photo expert-dashboard">
+                        <img src="https://randomuser.me/api/portraits/men/13.jpg">
+                    </div>
+                <h5 class="user-name">Alexander Schwarzerburgger</h5>
+            </div>
+            <nav class="mdx-app-nav">
+                <ul class="mdx-app-aside-menu">
+                    <li>
+                        <a href="home.html"><i class="nav-icon fa fa-home fa-lg"></i> Home</a>
+                    </li>
+                    <li>
+                        <a href="profile.html"><i class="nav-icon fa fa-user-circle fa-lg"></i> Profile</a>
+                    </li>
+                    <li>
+                        <a href="archive.html"><i class="nav-icon icon-archive"></i> Archive</a>
+                    </li>
+                    <li class="current">
+                        <a href="education.html"><i class="nav-icon fa fa-book fa-lg"></i> Education Center</a>
+                    </li>
+                    <li>
+                        <a href="support.html"><i class="nav-icon fa fa-life-ring fa-lg"></i> Support</a>
+                    </li>
+                    <li>
+                        <a href="../index.html"><i class="nav-icon fa fa-sign-out fa-lg"></i> Log out</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="mdx-app-aside-footer">
+                <a class="mdx-btn b-ghost b-block" href="../index.html">About MedAux</a>
+            </div>
+        </aside>
+        <div class="mdx-app-cover"></div>
+    </header>
+
+    <main class="mdx-app-main-section">
+
+        <div class="mdx-inner-container">
+            <form>
+                <div class="hero-cta-start-chat-input-holder search_bar_wrapper_flex pad_left_one">
+                    <input class="start-chat-input" type="text" placeholder="search for your media...">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+            </form>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12 push_down_three">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#images">Images</a></li>
+                            <li><a data-toggle="tab" href="#videos">Videos</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="images" class="push white_background tab-pane fade in active">
+                                <!-- overflow_height_container -->
+                                <div class="overflow_height_container publisher_border_skin">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <h1 class="tab_page_header pad_all_around_one border_bottom push_down_two">Thumbnail Gallery</h1>
+                                            </div>
+                                            <hr>  
+                                            <div class="media_img_container">              
+                                                <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                    <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                        <img class="img-responsive" src="https://source.unsplash.com/random/400x300" alt="" id="media_img_01">
+                                                        <div class="thumbnail_overlay">
+                                                            <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                        </div>
+                                                        <button class="thumbnail_btn hidden">
+                                                            <span class="thumbnail_btn-icon"></span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+
+                                                <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                    <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                        <img class="img-responsive" src="https://source.unsplash.com/random/400x300" alt="" id="media_img_02">
+                                                        <div class="thumbnail_overlay">
+                                                            <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                        </div>
+                                                        <button class="thumbnail_btn hidden">
+                                                            <span class="thumbnail_btn-icon"></span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                    <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                        <img class="img-responsive" src="https://source.unsplash.com/random/400x300" alt="" id="media_img_03">
+                                                        <div class="thumbnail_overlay">
+                                                            <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                        </div>
+                                                         <button class="thumbnail_btn hidden">
+                                                            <span class="thumbnail_btn-icon"></span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                    <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                        <img class="img-responsive" src="http://placehold.it/400x300" alt="" id="media_img_04">
+                                                        <div class="thumbnail_overlay">
+                                                            <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                        </div>
+                                                        <button class="thumbnail_btn hidden">
+                                                            <span class="thumbnail_btn-icon"></span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                    <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                        <img class="img-responsive" src="http://placehold.it/400x300" alt="" id="media_img_05">
+                                                        <div class="thumbnail_overlay">
+                                                            <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                        </div>
+                                                        <button class="thumbnail_btn hidden">
+                                                            <span class="thumbnail_btn-icon"></span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                    <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                        <img class="img-responsive" src="http://placehold.it/400x300" alt="" id="media_img_06">
+                                                        <div class="thumbnail_overlay">
+                                                            <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                        </div>
+                                                        <button class="thumbnail_btn hidden">
+                                                            <span class="thumbnail_btn-icon"></span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                    <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                        <img class="img-responsive" src="http://placehold.it/400x300" alt="" id="media_img_07">
+                                                        <div class="thumbnail_overlay">
+                                                            <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                        </div>
+                                                        <button class="thumbnail_btn hidden">
+                                                            <span class="thumbnail_btn-icon"></span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                    <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                        <img class="img-responsive" src="http://placehold.it/400x300" alt="" id="media_img_08">
+                                                        <div class="thumbnail_overlay">
+                                                            <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                        </div>
+                                                        <button class="thumbnail_btn hidden">
+                                                            <span class="thumbnail_btn-icon"></span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                    <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                        <img class="img-responsive" src="http://placehold.it/400x300" alt="" id="media_img_09">
+                                                        <div class="thumbnail_overlay">
+                                                            <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                        </div>
+                                                        <button class="thumbnail_btn hidden">
+                                                            <span class="thumbnail_btn-icon"></span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                    <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                        <img class="img-responsive" src="http://placehold.it/400x300" alt="" id="media_img_10">
+                                                        <div class="thumbnail_overlay">
+                                                            <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                        </div>
+                                                        <button class="thumbnail_btn hidden">
+                                                            <span class="thumbnail_btn-icon"></span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                    <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                        <img class="img-responsive" src="http://placehold.it/400x300" alt="" id="media_img_11">
+                                                        <div class="thumbnail_overlay">
+                                                            <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                        </div>
+                                                        <button class="thumbnail_btn hidden">
+                                                            <span class="thumbnail_btn-icon"></span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                    <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                        <img class="img-responsive" src="http://placehold.it/400x300" alt="" id="media_img_12">
+                                                        <div class="thumbnail_overlay">
+                                                            <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                        </div>
+                                                        <button class="thumbnail_btn hidden">
+                                                            <span class="thumbnail_btn-icon"></span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                    <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                        <img class="img-responsive" src="http://placehold.it/400x300" alt="" id="media_img_13">
+                                                        <div class="thumbnail_overlay">
+                                                            <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                        </div>
+                                                        <button class="thumbnail_btn hidden">
+                                                            <span class="thumbnail_btn-icon"></span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                    <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                        <img class="img-responsive" src="http://placehold.it/400x300" alt="" id="media_img_14">
+                                                        <div class="thumbnail_overlay">
+                                                            <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                        </div>
+                                                        <button class="thumbnail_btn hidden">
+                                                            <span class="thumbnail_btn-icon"></span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                    <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                        <img class="img-responsive" src="http://placehold.it/400x300" alt="" id="media_img_15">
+                                                        <div class="thumbnail_overlay">
+                                                            <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                        </div>
+                                                        <button class="thumbnail_btn hidden">
+                                                            <span class="thumbnail_btn-icon"></span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.container -->
+                                    </div>
+                                     <!-- overflow_height_container -->
+                                </div>
+                            </div>
+                            <div id="videos" class="push white_background tab-pane fade">
+                                    <div class="overflow_height_container publisher_border_skin">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <h1 class="tab_page_header pad_all_around_one border_bottom push_down_two">Video Gallery</h1>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                                                    <div class="thumbnail_overlay">
+                                                        <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                    </div>
+                                                    <button class="thumbnail_btn hidden">
+                                                        <span class="thumbnail_btn-icon"></span>
+                                                    </button>
+                                                </a>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                                                    <div class="thumbnail_overlay">
+                                                        <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                    </div>
+                                                    <button class="thumbnail_btn hidden">
+                                                        <span class="thumbnail_btn-icon"></span>
+                                                    </button>
+                                                </a>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                                                    <div class="thumbnail_overlay">
+                                                        <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                    </div>
+                                                    <button class="thumbnail_btn hidden">
+                                                        <span class="thumbnail_btn-icon"></span>
+                                                    </button>
+                                                </a>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                                                    <div class="thumbnail_overlay">
+                                                        <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                    </div>
+                                                    <button class="thumbnail_btn hidden">
+                                                        <span class="thumbnail_btn-icon"></span>
+                                                    </button>
+                                                </a>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                                                    <div class="thumbnail_overlay">
+                                                        <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                    </div>
+                                                    <button class="thumbnail_btn hidden">
+                                                        <span class="thumbnail_btn-icon"></span>
+                                                    </button>
+                                                </a>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                                                    <div class="thumbnail_overlay">
+                                                        <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                    </div>
+                                                    <button class="thumbnail_btn hidden">
+                                                        <span class="thumbnail_btn-icon"></span>
+                                                    </button>
+                                                </a>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                                                    <div class="thumbnail_overlay">
+                                                        <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                    </div>
+                                                    <button class="thumbnail_btn hidden">
+                                                        <span class="thumbnail_btn-icon"></span>
+                                                    </button>
+                                                </a>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                                                    <div class="thumbnail_overlay">
+                                                        <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                    </div>
+                                                    <button class="thumbnail_btn hidden">
+                                                        <span class="thumbnail_btn-icon"></span>
+                                                    </button>
+                                                </a>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 thumb">
+                                                <a class="thumbnail thumbnail_overlay_container" href="#">
+                                                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                                                    <div class="thumbnail_overlay">
+                                                        <div class="text"><i class="fa fa-plus fa-lg"></i></div>
+                                                    </div>
+                                                    <button class="thumbnail_btn hidden">
+                                                        <span class="thumbnail_btn-icon"></span>
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- /.container -->
+                                    </div>
+                                     <!-- overflow_height_container -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- edit component -->
+                        <div class="expert_media_action-flex publisher_border_skin white_background pad_one flex_column_direction">
+                        <!-- flex-2 -->
+                            <div>
+                                <div class="expert_media_action-counter_wrapper push_down_one push_right_one flex_vertical_align-self">
+                                    <div class="expert_media_action-flex flex_vertical_align-items">
+                                        <div class="image_counter_wrapper flex_grow_two">
+                                            <span id="image_counter" class="expert_media_counter_push_right"></span>
+                                            <span>selected</span>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn btn-danger" id="clear_media_btn">Clear all</button>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div id="thumbnail_display" class="expert_media_action-flex photos_container-overflow overflow_box_skin push_down_one">
+                                  <!--   <div class="expert_media_container">
+                                        <img src="http://placehold.it/400x300" class="thumbnail_frame">
+                                    </div> -->
+                          <!--            <div class = "expert_media_container">
+                                        <img src="https://unsplash.it/50/50">
+                                    </div>
+                                     <div class = "expert_media_container">
+                                        <img src="https://unsplash.it/50/50">
+                                    </div>
+                                     <div class = "expert_media_container">
+                                        <img src="https://unsplash.it/50/50">
+                                    </div>
+                                     <div class="expert_media_container">
+                                        <img src="https://unsplash.it/50/50">
+                                    </div>
+                                     <div class="expert_media_container">
+                                        <img src="https://unsplash.it/50/50">
+                                    </div>
+                                     <div class="expert_media_container">
+                                        <img src="https://unsplash.it/50/50">
+                                    </div>
+                                     <div class="expert_media_container">
+                                        <img src="https://unsplash.it/50/50">
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="flex_vertical_align-self expert_media_textarea_wrapper push_down_two">
+                                <textarea placeholder="insert a caption here..."></textarea>
+                            </div>
+                            <div class="expert_publish_btn_wrapper push_down_two">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Who should see this post?</button>
+                                <div id="myModal" class="modal fade pad_centi" role="dialog">
+                                    <div class="modal-dialog offset_height_modal">
+                                            <!-- Modal content-->
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Specific patients</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                            <form class="push_down_two">
+                                                <div class="hero-cta-start-chat-input-holder search_bar_wrapper_flex">
+                                                    <input class="start-chat-input" type="text" placeholder="search for a patient...">
+                                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                                </div>
+                                            </form>
+                                            <div class="modal_patients_list_wrapper overflow_height_container">
+                                                <div class="expert_media_action-flex flex_vertical_align-items patients_border_bottom">
+                                                    <div class="expert_media_action-flex flex_grow_two flex_vertical_align-items push_down_two push_up_two">
+                                                        <div class="patient_img_wrapper push_right_one">
+                                                            <img src="https://randomuser.me/api/portraits/men/32.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span>John Doe</span>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="btn-group" data-toggle="buttons">
+                                                    
+                                                          <label class="btn btn-primary">
+                                                            <input type="checkbox" autocomplete="off"> Select
+                                                          </label>
+                                                     
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="expert_media_action-flex flex_vertical_align-items patients_border_bottom">
+                                                    <div class="expert_media_action-flex flex_grow_two flex_vertical_align-items push_down_two push_up_two">
+                                                        <div class="patient_img_wrapper push_right_one"">
+                                                            <img src="https://randomuser.me/api/portraits/men/32.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span>John Doe</span>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="btn-group" data-toggle="buttons">
+                                                    
+                                                          <label class="btn btn-primary">
+                                                            <input type="checkbox" autocomplete="off"> Select
+                                                          </label>
+                                                     
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="expert_media_action-flex flex_vertical_align-items patients_border_bottom">
+                                                    <div class="expert_media_action-flex flex_grow_two flex_vertical_align-items push_down_two push_up_two">
+                                                        <div class="patient_img_wrapper push_right_one"">
+                                                            <img src="https://randomuser.me/api/portraits/men/32.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span>John Doe</span>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="btn-group" data-toggle="buttons">
+                                                    
+                                                          <label class="btn btn-primary">
+                                                            <input type="checkbox" autocomplete="off"> Select
+                                                          </label>
+                                                     
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="expert_media_action-flex flex_vertical_align-items patients_border_bottom">
+                                                    <div class="expert_media_action-flex flex_grow_two flex_vertical_align-items push_down_two push_up_two">
+                                                        <div class="patient_img_wrapper push_right_one"">
+                                                            <img src="https://randomuser.me/api/portraits/men/32.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span>John Doe</span>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="btn-group" data-toggle="buttons">
+                                                    
+                                                          <label class="btn btn-primary">
+                                                            <input type="checkbox" autocomplete="off"> Select
+                                                          </label>
+                                                     
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <!-- schedule -->
+                                                <div class="expert_media_action-flex push_down_one flex_end_horizontal">
+                                                    <div class="expert_media_action-flex push_right_one">
+                                                       <div class="push_right_one">
+                                                           <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                       </div>
+                                                       <span class="push_right_one">Schedule post</span>
+                                                       <div>
+                                                            <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                                                Edit
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="collapse" id="collapseExample">
+                                                    <div class="inner_publish-schedule_wrapper">
+                                                        <form class="push_down_one">
+                                                          <fieldset>
+                                                              <div class="date_wrapper">
+                                                                <div class="month form-group">
+                                                                    <span class="sr-only">Month</span>
+                                                                    <label for="month"></label>
+                                                                    <select id="month" name="month" class="form-control">
+                                                                        <option value="01" data-text="Jan">01-Jan</option>
+                                                                        <option value="02" data-text="Jan">02-Feb</option>
+                                                                        <option value="03" data-text="Jan">03-Mar</option>
+                                                                        <option value="04" data-text="Jan">04-Apr</option>
+                                                                        <option value="05" data-text="Jan">05-May</option>
+                                                                        <option value="06" data-text="Jan">06-Jun</option>
+                                                                        <option value="07" data-text="Jan">07-Jul</option>
+                                                                        <option value="08" data-text="Jan">08-Aug</option>
+                                                                        <option value="09" data-text="Jan">09-Sept</option>
+                                                                        <option value="10" data-text="Jan">10-Oct</option>
+                                                                        <option value="11" data-text="Jan">11-Nov</option>
+                                                                        <option value="12" data-text="Jan">12-Dec</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="day form-group">
+                                                                    <span class="sr-only">Day</span>
+                                                                    <label for="day"></label>
+                                                                    <div>
+                                                                        <input id="day" type="text" class="form-control" placeholder="day" size="2" maxlength="2"/>
+                                                                        <span class="date_comma">,</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="year form-group expert_media_action-flex flex_column_direction">
+                                                                    <div class="year_container push_down_one">
+                                                                        <span class="sr-only"></span>
+                                                                        <label for="year"></label>
+                                                                        <div>
+                                                                            <input type="text" id="year" class="form-control" placeholder="year" size="4" maxlength="4" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="expert_media_action-flex flex_column_direction">
+                                                                        <div class="flex_vertical_align-self">
+                                                                            <p>@</p>
+                                                                        </div>
+                                                                        <div class="year form-group expert_media_action-flex">
+                                                                            <span class="sr-only"></span>
+                                                                            <label for="time"></label>
+                                                                            <div class="expert_media_action-flex">
+                                                                                <input type="text" id="year" class="form-control" placeholder="hr" size="2" maxlength="2" />
+                                                                                <span class="flex_vertical_align-self time_colon_push">:</span>
+                                                                                <input type="text" id="year" class="form-control" placeholder="min" size="4" maxlength="2" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                              </div>
+                                                          </fieldset>
+                                                        </form>
+                                                        <div class="push_down_one flex_row_reverse flex_vertical_align-items expert_schedule_btn_wrapper">
+                                                            <a href="#collapseExample" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample">Cancel</a>
+                                                            <a class="btn btn-primary push_right_one expert_schedule_btn_ok" href="#collapseExample" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample">OK</a>   
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div>
+                                                    <button type="button" class="btn btn-primary">Publish</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                     </div>
+                        <!-- /edit component -->
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div class="mdx-app-copyright"><script>document.write(new Date().getFullYear());</script> &copy; MedAux LLC. All rights reserved.</div>
+</div>
+
+
+<script src="../assets/js/jquery/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src='../assets/js/main.min.js'></script>
+<script src='../assets/js/media_counter.js'></script>
+<!-- <script src='../assets/js/script.js'></script> -->
+</body>
+
+
+</html>
